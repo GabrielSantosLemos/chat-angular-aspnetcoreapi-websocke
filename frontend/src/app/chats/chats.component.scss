@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+
+  table {
+    th,
+    td {
+      text-align: left;
+    }
+  }
+}

@@ -9,7 +9,7 @@ export class WebSocketService {
   private baseUrl = environment.baseUrl;
 
   constructor() {
-    this.wsSubject = webSocket(`ws://${this.baseUrl}/ws`);
+    this.wsSubject = webSocket(`ws://${this.baseUrl}/ws/v3`);
   }
 
   enviarMensagem(mensagem: Mensagem): void {

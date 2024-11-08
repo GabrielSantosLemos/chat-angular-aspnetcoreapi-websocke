@@ -1,0 +1,9 @@
+<h2>Login</h2>
+
+<input
+  type="text"
+  [(ngModel)]="usuario"
+  [ngModelOptions]="{ standalone: true }"
+  placeholder="Usuário" />
+
+<button (click)="login()">Enviar</button>

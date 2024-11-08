@@ -6,9 +6,12 @@ import { AppComponent } from './app.component';
 import { WebSocketService } from './websocket.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AppStateService } from './app-state.service';
+import { LoginComponent } from './login/login.component';
+import { ChatsComponent } from './chats/chats.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent, ChatsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -16,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [WebSocketService],
+  providers: [WebSocketService, AppStateService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

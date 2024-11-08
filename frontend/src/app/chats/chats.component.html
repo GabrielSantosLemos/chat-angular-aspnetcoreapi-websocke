@@ -1,0 +1,26 @@
+<h1>Chat Angular API ASP.NET Core WebSocket</h1>
+<h2>Chat</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>De</th>
+      <th>Mensagem</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let mensagem of mensagens">
+      <td>{{ mensagem.de }}</td>
+      <td>{{ mensagem.texto }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<form (ngSubmit)="enviarMensagem()">
+  <input
+    type="text"
+    [(ngModel)]="mensagemTexto"
+    [ngModelOptions]="{ standalone: true }"
+    placeholder="Digite sua mensagem..." />
+  <button type="submit">Enviar</button>
+</form>
